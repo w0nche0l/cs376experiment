@@ -24,14 +24,14 @@
         console.log('hello')
         console.log($('#google_image_div').innerHTML) 
         var test = getParameterByName('test');
-        if(test==1) {
-          console.log(1)
+        if(test==0) {
+          console.log(0)
           $('#HeaderAd')[0].innerHTML = '<img src="calcium/vitamin.jpg">'
           $('#ContentPlaceHolder1_ucAd_pnlWrapper')[0].innerHTML = '<img src="calcium/insurance.jpg">'
           $('#ContentPlaceHolder1_Ad1_pnlWrapper')[0].innerHTML = '<img src="calcium/medicare.jpg">'
           $('#fac_pnlWrapper')[0].innerHTML = ''
         } else {
-          console.log(0)
+          console.log(1)
           $('#HeaderAd')[0].innerHTML = '<img src="calcium/subaru.jpg">'
           $('#ContentPlaceHolder1_ucAd_pnlWrapper')[0].innerHTML = '<img src="calcium/heroku.png">'
           $('#ContentPlaceHolder1_Ad1_pnlWrapper')[0].innerHTML = '<img src="calcium/oregon.jpg">'
