@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://secure.flashtalking.com/64105/1524902/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style></style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="ad.size" content="width=300,height=250">
+		<title>SlingTV 300x250 | </title>
+		<link rel="stylesheet" type="text/css" href="./css-reset.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+
+		<script src="./TweenLite.min.js.download"></script>
+		<script src="./TimelineLite.min.js.download"></script>
+		<script src="./easepack.min.js.download"></script>
+		<script src="./cssplugin.min.js.download"></script>
+
+		<script src="./createjs-2015.11.26.min.js.download"></script>
+		<script src="./AdHelper.min.js.download"></script>
+		<script src="./300x250.js.download"></script>
+
+		<script>
+		var canvas, stage, exportRoot;
+		function initLoad() {
+
+			canvas = document.getElementById("canvas");
+			images = images||{};
+
+			var loader = new createjs.LoadQueue(false);
+			loader.addEventListener("fileload", handleFileLoad);
+			loader.addEventListener("complete", handleComplete);
+			loader.loadManifest(lib.properties.manifest);
+		}
+
+		function handleFileLoad(evt) {
+			if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+		}
+
+		function handleComplete(evt) {
+			exportRoot = new lib._300x250();
+			initVars();
+		}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="ad" style="cursor: pointer; background-image: url(&quot;about:blank&quot;);">
+
+			<canvas id="canvas" width="300" height="250" style="opacity: 1;"></canvas>
+			<div id="loading" style="cursor: pointer; opacity: 0;"></div>
+			<div id="border"></div>
+
+		</div><!-- ad -->
+
+		<script src="./anim.js.download"></script>
+		<script src="./html5API.js.download"></script>
+
+		<script type="text/javascript">
+			container = myFT.$("#ad");
+			myFT.applyClickTag(container, 1);
+		</script>
+
+		<script type="text/javascript">
+			myFT.on('ready', function(){
+				myFT.require(['anim.js'], function(){
+					initLoad();
+				});
+			});
+		</script>
+
+	
+</body></html>
